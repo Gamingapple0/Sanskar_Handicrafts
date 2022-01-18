@@ -1,0 +1,481 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sanskar Handicrafts</title>
+    <link rel="stylesheet" href="{% static 'website/fontawesome-5.5/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'website/slick/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'website/slick/slick-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'website/magnific-popup/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}" />
+
+<style>
+  #view{
+    text-align: center;
+    padding: 10px 10px;
+    background-color: #369;
+    max-height: 46px;
+    max-width: 126px;
+    margin: auto;
+    text-decoration: none;
+    transition: 0.6s;
+  }
+  #view:hover{
+    background-color:#FFF;
+    cursor: pointer;
+  }
+  #view > a{
+    color: #FFF;
+  }
+  #view:hover > a{
+    color: #369;
+  }
+</style>
+  </head>
+  <body>    
+    <!-- Hero section -->
+    <section id="infinite" class="text-white tm-font-big tm-parallax">
+      <!-- Navigation -->            
+      <nav class="navbar navbar-expand-md tm-navbar scroll" id="tmNav">
+        <div class="tm-next">
+          <a href="#infinite" class="navbar-brand" style="background: white;color: #369;width: 100%;padding-left: 10px;">
+            Sanskar Handicrafts</a>
+      </div> 
+        <div class="container" style="display:grid; padding-left: 0; margin-left: 0;">   
+  
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#infinite">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#whatwedo">What We Do</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="#gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="making" id="making">Making</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#contact">Contact</a>
+              </li>                    
+            </ul>
+          </div>        
+        </div>
+      </nav>
+
+      <!-- <div class="tm-next tm-intro-next">
+        <a href="#whatwedo" class="text-center tm-down-arrow-link">
+          <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+        </a>
+      </div>       -->
+    </section>
+    <br>
+
+    <section id="whatwedo" class="tm-section-pad-top" style="padding-top:50px; padding-bottom: 0px;">
+      
+      <div class="container">
+
+            <div class="row tm-content-box"><!-- first row -->
+                <div class="col-lg-12 col-xl-12">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4 tm-section-title">What We Do</h2>
+                        <p class="mb-4 tm-intro-text">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut egestas erat non nibh sodales commodo. Quisque ut arcu eu magna molestie hendrerit ut accumsan nibh. Duis pulvinar, metus id egestas semper, lectus mauris condimentum nisl, ac tincidunt lorem libero vitae mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis lacinia lacinia mi, quis venenatis nisl mollis sit amet. <a href="https://googlr.com">Link to somewhere</a>.</p>
+                    </div>
+                </div>
+
+            </div><!-- first row -->
+            
+            <div class="row tm-content-box"><!-- second row -->
+        		<div class="col-lg-1">
+                    <i class="far fa-3x fa-chart-bar text-center tm-icon"></i>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4">Pont 1</h2>
+                        <p class="mb-4 tm-intro-text">
+                          Praesent sed pharetra lorem, blandit convallis mi. Aenean ornare elit ac metus lacinia, sed iaculis nibh semper. Pellentesque est urna.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-1">
+                    <i class="far fa-3x fa-comment-alt text-center tm-icon"></i>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4">Point 2</h2>
+                        <p class="mb-4 tm-intro-text">
+                          Armain gos <a rel="nofollow" href="https://www.google.com">Link</a>Donec aliquam volutpat justo, a pharetra ligula. Donec auctor, ante sit amet vulputate suscipit, neque ante blandit diam, aliquet cursus nibh lectus et justo. Cras condimentum mi et sapien dignissim luctus.</p>
+                    </div>
+                </div>
+
+            </div><!-- second row -->
+            
+            <div class="row tm-content-box"><!-- third row -->
+        		<div class="col-lg-1">
+                    <!-- <i class="fas fa-3x fa-fingerprint text-center tm-icon"></i> -->
+                    <i class="far fa-3x fa-address-book text-center tm-icon"></i>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4">Point 3</h2>
+                        <p class="mb-4 tm-intro-text">
+                      Dones <strong>Bold Woow</strong> Ut pharetra velit maximus, imperdiet metus vel, mattis libero. Nam luctus molestie vehicula. Sed hendrerit, ligula in maximus mattis, risus dui convallis enim, non molestie sapien ante nec quam. Pellentesque est  <i>Italiano</i> massa, iaculis et sollicitudin sed, aliquet vel urna.</p>
+                          
+                          <div class="tm-continue">
+                            <a href="http://www.google.com" class="tm-intro-text tm-btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-1">
+                    <i class="fas fa-3x fa-users text-center tm-icon"></i>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tm-intro-text-container">
+                      <h2 class="tm-text-primary mb-4">Point 4</h2>
+                        <p class="mb-4 tm-intro-text">
+                      Dopsla Ut <a href="https://google.com">Another Link wow</a> Donec libero libero, commodo a odio at, ornare aliquet dui. Quisque mi ipsum, elementum a lorem id, vestibulum laoreet ante. Donec sed urna sit amet diam bibendum cursus vitae sit amet ex. Etiam a nulla vel nibh aliquet lobortis. Donec dui massa, molestie non risus id, sagittis pellentesque tortor.</p>
+                          
+                          <div class="tm-continue">
+                            <a href="#testimonials" class="tm-intro-text tm-btn-primary">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- third row -->
+
+        </div>
+      
+    </section>
+    
+    <section id="testimonials" class="tm-section-pad-top tm-parallax-2" style="background-image: none; display: none;">      
+      
+    </section>
+    
+    <section id="gallery" class="tm-section-pad-top" style="padding-top: 30px">
+      <div class="container tm-container-gallery">
+        <div class="row">
+          <div class="text-center col-12">
+              <h2 class="tm-text-primary tm-section-title mb-4">Gallery</h2>
+              <p class="mx-auto tm-section-desc">
+                Praesent sed pharetra lorem, blandit convallis mi. Aenean ornare elit ac metus lacinia, sed iaculis nibh semper. Pellentesque est urna, lobortis eu arcu a, aliquet tristique urna.
+              </p>
+          </div>            
+        </div>
+        <div class="row">
+            <div class="col-12">
+                 <div class="mx-auto tm-gallery-container">
+                    <div class="grid tm-gallery">
+                        {% for image in images %}
+                      <a href="{{image.img.url}}">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="{{image.img.url}}" alt="{{image.name}}" class="img-fluid">
+                        </figure>
+                      </a>
+                        {% endfor %}
+                    </div>
+                </div>
+              </div>
+          </div>
+
+      <div id='view'>
+       <a href="gallery"> View All</a>
+      </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="tm-section-pad-top tm-parallax-2" style="padding-top:80px">
+    
+      <div class="container tm-container-contact">
+        
+        <div class="row">
+            
+            <div class="text-center col-12">
+                <h2 class="tm-section-title mb-4">Contact Us</h2>
+                <p class="mb-5">
+                  Proin enim orci, tincidunt quis suscipit in, placerat nec est. Vestibulum posuere faucibus posuere. Quisque aliquam velit eget leo blandit egestas. Nulla id posuere felis, quis tristique nulla.
+                </p><br>
+            </div>
+            
+            <div class="col-sm-12 col-md-6">
+              <form action="/submitted" method="POST">{% csrf_token %}
+                <input id="name" name="name" type="text" placeholder="Your Name" class="tm-input" required />
+                <input id="email" name="email" type="email" placeholder="Your Email" class="tm-input" required />
+                <textarea id="message" name="message" rows="8" placeholder="Message" class="tm-input" required></textarea>
+                <button type="submit" class="btn tm-btn-submit">Submit</button>
+              </form>
+            </div>
+            
+            <div class="col-sm-12 col-md-6">
+                
+                <div class="contact-item">
+                  <a rel="nofollow" href="mailto:mail@company.com" class="item-link">
+                      <i class="far fa-2x fa-envelope mr-4"></i>
+                      <span class="mb-0">mail@company.com</span>
+                  </a>              
+                </div>
+                
+                <div class="contact-item">
+                  <a rel="nofollow" href="https://www.google.com/maps" class="item-link">
+                      <i class="fas fa-2x fa-map-marker-alt mr-4"></i>
+                      <span class="mb-0">Our Location</span>
+                  </a>              
+                </div>
+                
+                <div class="contact-item">
+                  <a rel="nofollow" href="tel:0100200340" class="item-link">
+                      <i class="fas fa-2x fa-phone-square mr-4"></i>
+                      <span class="mb-0">255-662-5566</span>
+                  </a>              
+                </div>
+                
+                <div class="contact-item">&nbsp;</div>
+            
+            </div>
+            
+            
+        </div><!-- row ending -->
+        
+      </div>
+
+        <div>
+            {{ name }}
+            {{ email }}
+            {{ message }}
+        </div>
+
+      	<footer class="text-center small tm-footer">
+          <p class="mb-0">
+          Copyright &copy; 2020 Company Name 
+          
+          . <a rel="nofollow" href="https://www.tooplate.com" title="HTML templates">Link</a></p>
+        </footer>
+
+    </section>
+    
+    <script src="{% static 'website/js/jquery-1.9.1.min.js' %}"></script>
+    <script src="{% static 'website/slick/slick.min.js' %}"></script>
+    <script src="{% static 'website/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'website/js/easing.min.js' %}"></script>
+    <script src="{% static 'website/js/jquery.singlePageNav.min.js' %}"></script>
+    <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+    <script>
+      
+      function getOffSet(){
+        var _offset = 450;
+        var windowHeight = window.innerHeight;
+
+        if(windowHeight > 500) {
+          _offset = 400;
+        } 
+        if(windowHeight > 680) {
+          _offset = 300
+        }
+        if(windowHeight > 830) {
+          _offset = 210;
+        }
+
+        return _offset;
+      }
+
+      function setParallaxPosition($doc, multiplier, $object){
+        var offset = getOffSet();
+        var from_top = $doc.scrollTop(),
+          bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+        $object.css({"background-position" : bg_css });
+      }
+
+      // Parallax function
+      // Adapted based on https://codepen.io/roborich/pen/wpAsm        
+      var background_image_parallax = function($object, multiplier, forceSet){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        // $object.css({"background-attatchment" : "fixed"});
+
+        if(forceSet) {
+          setParallaxPosition($doc, multiplier, $object);
+        } else {
+          $(window).scroll(function(){          
+            setParallaxPosition($doc, multiplier, $object);
+          });
+        }
+      };
+
+      var background_image_parallax_2 = function($object, multiplier){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        $object.css({"background-attachment" : "fixed"});
+        
+        $(window).scroll(function(){
+          if($(window).width() > 768) {
+            var firstTop = $object.offset().top,
+                pos = $(window).scrollTop(),
+                yPos = Math.round((multiplier * (firstTop - pos)) - 186);              
+
+            var bg_css = 'center ' + yPos + 'px';
+
+            $object.css({"background-position" : bg_css });
+          } else {
+            $object.css({"background-position" : "center" });
+          }
+        });
+      };
+      
+      $(function(){
+        // Hero Section - Background Parallax
+        background_image_parallax($(".tm-parallax"), 0.30, false);
+        background_image_parallax_2($("#contact"), 0.80);   
+        background_image_parallax_2($("#testimonials"), 0.80);   
+        
+        // Handle window resize
+        window.addEventListener('resize', function(){
+          background_image_parallax($(".tm-parallax"), 0.30, true);
+        }, true);
+
+        // Detect window scroll and update navbar
+        $(window).scroll(function(e){          
+          if($(document).scrollTop() > 120) {
+            $('.tm-navbar').addClass("scroll");
+          }
+        });
+        
+        // Close mobile menu after click 
+        $('#tmNav a').on('click', function(){
+          $('.navbar-collapse').removeClass('show'); 
+        })
+
+        // Scroll to corresponding section with animation
+        $('#tmNav').singlePageNav({
+          'easing': 'easeInOutExpo',
+          'speed': 600
+        });        
+        
+        // Add smooth scrolling to all links
+        // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 600, 'easeInOutExpo', function(){
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+
+        // Pop up
+        $('.tm-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: { enabled: true }
+        });
+
+        $('.tm-testimonials-carousel').slick({
+          dots: true,
+          prevArrow: false,
+          nextArrow: false,
+          infinite: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2
+              }
+            }, 
+            {
+              breakpoint: 480,
+              settings: {
+                  slidesToShow: 1
+              }                 
+            }
+          ]
+        });
+
+        // Gallery
+        $('.tm-gallery').slick({
+          dots: true,
+          infinite: false,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded',function(){
+        $('ul.slick-dots').remove()
+      })
+      let url = 'http://127.0.0.1:8000/'
+<!--        let url = 'http://192.168.1.15:8000/'-->
+      $('#making').click(function(){
+        window.location.href = url + "making"
+      })
+      $('#view').click(function(){
+        window.location.href = url + "gallery"
+      })
+    </script>
+    <style>
+      a.slick-slide{
+        /* max-width: 220px; */
+      }
+      img.img-fluid{
+        min-width: 220px;
+        max-width: 200px;
+        max-height: 300px;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskar Handicrafts</title>
+    <link rel="stylesheet" href="{% static 'website/fontawesome-5.5/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'website/magnific-popup/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}" />
+    <style>
+.flex-box{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    padding-top: 40px;
+
+}
+.flex-img{
+    max-width: 500px;
+    max-height: 400px;
+    padding: 20px;
+}
+.flex-text{
+    padding: 20px;
+    max-width: 500px;
+}
+.flex-rev{
+    flex-direction: row-reverse;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-md tm-navbar scroll" id="tmNav">
+        <div class="tm-next">
+          <a href="#infinite" class="navbar-brand" style="background: white;color: #369;width: 100%;padding-left: 10px;" id="home">
+            Sanskar Handicrafts</a>
+      </div> 
+        <div class="container" style="display:grid; padding-left: 0; margin-left: 0;">   
+  
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="/" id="home">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="/" id="wwd">What We Do</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="/" id="gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#making">Making</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#contact">Contact</a>
+              </li>                    
+            </ul>
+          </div>        
+        </div>
+      </nav>
+
+      <section id="making" class="tm-section-pad-top tm-parallax-2" style="padding-top:80px">
+            {% block body %}
+            {% endblock %}
+              <nav aria-label="Page navigation example">
+  <ul class="pagination pagination-lg justify-content-center" >
+    <li class="page-item">
+      <a class="page-link" href="/{{prev}}" aria-label="Previous">
+        <span aria-hidden="true" style="font-size:40px; color: #369">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#" style="visibility:hidden">1</a></li>
+    <li class="page-item"><a class="page-link" href="#" style="visibility:hidden">2</a></li>
+    <li class="page-item"><a class="page-link" href="#" style="visibility:hidden">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="/{{nxt}}" aria-label="Next">
+        <span aria-hidden="true" style="font-size:40px; color: #369">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!--        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+
+    </section>
+      
+      <!-- Contacts -->
+      <section id="contact" class="tm-section-pad-top tm-parallax-2" style="padding-top:80px">
+    
+        <div class="container tm-container-contact">
+          
+          <div class="row">
+              
+              <div class="text-center col-12">
+                  <h2 class="tm-section-title mb-4">Contact Us</h2>
+                  <p class="mb-5">
+                    Proin enim orci, tincidunt quis suscipit in, placerat nec est. Vestibulum posuere faucibus posuere. Quisque aliquam velit eget leo blandit egestas. Nulla id posuere felis, quis tristique nulla.
+                  </p><br>
+              </div>
+              
+              <div class="col-sm-12 col-md-6">
+                <form action="/submitted" method="POST">{% csrf_token %}
+                  <input id="name" name="name" type="text" placeholder="Your Name" class="tm-input" required />
+                  <input id="email" name="email" type="email" placeholder="Your Email" class="tm-input" required />
+                  <textarea id="message" name="message" rows="8" placeholder="Message" class="tm-input" required></textarea>
+                  <button type="submit" class="btn tm-btn-submit">Submit</button>
+                </form>
+              </div>
+              
+              <div class="col-sm-12 col-md-6">
+                  
+                  <div class="contact-item">
+                    <a rel="nofollow" href="mailto:mail@company.com" class="item-link">
+                        <i class="far fa-2x fa-envelope mr-4"></i>
+                        <span class="mb-0">mail@company.com</span>
+                    </a>              
+                  </div>
+                  
+                  <div class="contact-item">
+                    <a rel="nofollow" href="https://www.google.com/maps" class="item-link">
+                        <i class="fas fa-2x fa-map-marker-alt mr-4"></i>
+                        <span class="mb-0">Our Location</span>
+                    </a>              
+                  </div>
+                  
+                  <div class="contact-item">
+                    <a rel="nofollow" href="tel:0100200340" class="item-link">
+                        <i class="fas fa-2x fa-phone-square mr-4"></i>
+                        <span class="mb-0">255-662-5566</span>
+                    </a>              
+                  </div>
+                  
+                  <div class="contact-item">&nbsp;</div>
+              
+              </div>
+              
+              
+          </div><!-- row ending -->
+          
+        </div>
+  
+            <footer class="text-center small tm-footer">
+            <p class="mb-0">
+                . <a rel="nofollow" href="https://www.tooplate.com" title="HTML templates">Link</a></p>
+            </footer>
+
+      </section>
+
+    <script src="{% static 'website/js/jquery-1.9.1.min.js' %}"></script>
+    <script src="{% static 'website/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'website/js/easing.min.js' %}"></script>
+    <script src="{% static 'website/js/jquery.singlePageNav.min.js' %}"></script>
+    <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+    <script>
+        $(function(){
+
+          // Detect window scroll and update navbar
+          $(window).scroll(function(e){
+            if($(document).scrollTop() > 120) {
+              $('.tm-navbar').addClass("scroll");
+            }
+          });
+
+          // Close mobile menu after click
+          $('#tmNav a').on('click', function(){
+            $('.navbar-collapse').removeClass('show');
+          })
+
+          // Scroll to corresponding section with animation
+          $('#tmNav').singlePageNav({
+            'easing': 'easeInOutExpo',
+            'speed': 600
+          });
+
+          // Add smooth scrolling to all links
+          // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+              event.preventDefault();
+              var hash = this.hash;
+
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 600, 'easeInOutExpo', function(){
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        })
+
+
+      </script>
+    <script>
+      let url = 'http://127.0.0.1:8000/'
+      $('#home').click(function(){
+        window.location.href = url
+      })
+      $('#wwd').click(function(){
+        window.location.href = url + '#whatwedo'
+      })
+      $('#gallery').click(function(){
+        window.location.href = url + '#gallery'
+      })
+      </script>
+</body>
+</html>
+Copyright &copy; 2020 Company Name
+
