@@ -5,6 +5,7 @@ from .models import Gallery,Highlights
 
 h_images = Highlights.objects.all()
 g_images = Gallery.objects.all()
+g_images = {}
 cnt = 1
 rows = []
 row = []
