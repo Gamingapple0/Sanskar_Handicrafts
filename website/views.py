@@ -6,6 +6,10 @@ from .models import Gallery,Highlights
 
 def home(request):
     h_images = Highlights.objects.all()
+    return render(request, 'index.html',{'images':h_images})
+
+# Seperates the gallery images into a 2d list of rows
+def gallery_object_seperator(max_rows_per_page=1):
     g_images = Gallery.objects.all()
 
     cnt = 1
@@ -26,7 +30,6 @@ def home(request):
         rows.append(row)
 
     # Seperating the rows into multiple pages to insure faster loading and better optimization
-    max_rows_per_page = 1
     home_page = rows[:max_rows_per_page]
     divided_rows_list = []
     first = max_rows_per_page
@@ -36,16 +39,16 @@ def home(request):
         divided_rows_list.append(rows[first:last])
         first = last
         last += max_rows_per_page
-    return render(request, 'index.html',{'images':h_images})
+    return home_page,divided_rows_list
 
-home_page = {}
-divided_rows_list = {}
 def gallery(request):
+    home_page, divided_rows_list = gallery_object_seperator(1)
     return render(request, 'gallery.html', {'rows':home_page,'nxt':1,'prev':len(divided_rows_list)})
 
     # return render(request,'gallery.html',{'rows':rows})
 
 def nxt_pg(request,num):
+    home_page, divided_rows_list = gallery_object_seperator(1)
     if num > len(divided_rows_list) or num == 0:
         return gallery(request)
     elif num < 0:
