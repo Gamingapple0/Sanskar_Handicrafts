@@ -3,42 +3,43 @@ from django.core.mail import send_mail
 from .models import Gallery,Highlights
 
 
-h_images = Highlights.objects.all()
-g_images = Gallery.objects.all()
-
-cnt = 1
-rows = []
-row = []
-# Dividing the images into rows of 3 images per row as the maximum and creating a list of those rows
-for image in g_images:
-    if cnt < 3:
-        row.append(image)
-    else:
-        row.append(image)
-        cnt = 0
-        rows.append(row)
-        row = []
-    cnt += 1
-
-if row:
-    rows.append(row)
-
-# Seperating the rows into multiple pages to insure faster loading and better optimization
-max_rows_per_page = 1
-home_page = rows[:max_rows_per_page]
-divided_rows_list = []
-first = max_rows_per_page
-last = max_rows_per_page + max_rows_per_page
-curr_page = 1
-for i in range(max_rows_per_page, len(rows), max_rows_per_page):
-    divided_rows_list.append(rows[first:last])
-    first = last
-    last += max_rows_per_page
-
 
 def home(request):
+    h_images = Highlights.objects.all()
+    g_images = Gallery.objects.all()
+
+    cnt = 1
+    rows = []
+    row = []
+    # Dividing the images into rows of 3 images per row as the maximum and creating a list of those rows
+    for image in g_images:
+        if cnt < 3:
+            row.append(image)
+        else:
+            row.append(image)
+            cnt = 0
+            rows.append(row)
+            row = []
+        cnt += 1
+
+    if row:
+        rows.append(row)
+
+    # Seperating the rows into multiple pages to insure faster loading and better optimization
+    max_rows_per_page = 1
+    home_page = rows[:max_rows_per_page]
+    divided_rows_list = []
+    first = max_rows_per_page
+    last = max_rows_per_page + max_rows_per_page
+    curr_page = 1
+    for i in range(max_rows_per_page, len(rows), max_rows_per_page):
+        divided_rows_list.append(rows[first:last])
+        first = last
+        last += max_rows_per_page
     return render(request, 'index.html',{'images':h_images})
 
+home_page = {}
+divided_rows_list = {}
 def gallery(request):
     return render(request, 'gallery.html', {'rows':home_page,'nxt':1,'prev':len(divided_rows_list)})
 
