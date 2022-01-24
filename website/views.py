@@ -2,7 +2,7 @@ from django.shortcuts import render,get_object_or_404
 from django.core.mail import send_mail
 from .models import Gallery,Highlights
 
-
+max_row_per_pg = 1
 
 def home(request):
     h_images = Highlights.objects.all()
@@ -42,13 +42,13 @@ def gallery_object_seperator(max_rows_per_page=1):
     return home_page,divided_rows_list
 
 def gallery(request):
-    home_page, divided_rows_list = gallery_object_seperator(1)
+    home_page, divided_rows_list = gallery_object_seperator(max_row_per_pg)
     return render(request, 'gallery.html', {'rows':home_page,'nxt':1,'prev':len(divided_rows_list)})
 
     # return render(request,'gallery.html',{'rows':rows})
 
 def nxt_pg(request,num):
-    home_page, divided_rows_list = gallery_object_seperator(1)
+    home_page, divided_rows_list = gallery_object_seperator(max_row_per_pg)
     if num > len(divided_rows_list) or num == 0:
         return gallery(request)
     elif num < 0:
