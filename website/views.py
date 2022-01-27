@@ -65,6 +65,7 @@ def making2(request):
     return render(request,'mk3.html',{'nxt':'making','prev':'making1'})
 
 def submitted(request):
+    h_images = Highlights.objects.all()
     name = email = message = None
     if request.method == 'POST':
         name = request.POST['name']
