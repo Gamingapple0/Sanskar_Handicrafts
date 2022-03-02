@@ -32,6 +32,12 @@
   #view > a{
     color: #FFF;
   }
+  .flex-box{  
+    display: flex;  
+    flex-wrap:wrap;
+    justify-content: space-around;
+    padding-top: 40px;
+  }
   .flex-img{
     max-width: 500px;
     max-height: 400px;
@@ -116,7 +122,7 @@
                   <p>The legendary artisan, Late Mr. <b>SIDDHI RAJ SHAKYA</b>, needs no introduction. He is a big name, a brand, in the world of arts and crafts. His work and his contribution to art and culture is impeccable.</p>                            
               </div>
           </div>
-          <div class="flex-box">
+          <div class="flex-box flex-rev">
               <div><img src="{% static 'website/img/Man1.jpg' %}" alt="" class="flex-img"></div>
               <div class="flex-text">
                   <h5>Senior Sculptor of our firm</h5>
