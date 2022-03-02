@@ -164,6 +164,11 @@
     <script src="{% static 'website/js/jquery.singlePageNav.min.js' %}"></script>
     <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
     <script>
+        $('.tm-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: { enabled: true }
+        });
         $(function(){
 
           // Detect window scroll and update navbar
